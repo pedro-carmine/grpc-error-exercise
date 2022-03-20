@@ -17,7 +17,16 @@ message ConsultResponse {
     int32 response = 1;
 }
 
+message FundAllRequest {
+  int32 amount = 1;
+}
+
+message FundAllResponse {
+  // empty
+}
+
 service BankingService {
 	rpc register(RegisterRequest) returns (RegisterResponse);
     rpc consult(ConsultRequest) returns (ConsultResponse);
+    rpc fundAll(FundAllRequest) returns (FundAllResponse);
 }
